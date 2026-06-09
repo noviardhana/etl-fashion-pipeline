@@ -1,0 +1,13 @@
+# Mengabaikan file kredensial rahasia
+google-sheets-api.json
+credentials.json
+
+# Mengabaikan file data (biar GitHub lu gak penuh)
+product.csv
+*.db
+*.sqlite
+
+# Mengabaikan folder cache bawaan Python & Pytest
+__pycache__/
+.pytest_cache/
+.coverage
