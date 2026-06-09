@@ -24,7 +24,7 @@ def transform_data(raw_data: list) -> pd.DataFrame:
         if 'Price' in df.columns:
             # Bersihkan teks -> Ubah ke Numerik -> Kali 16.000 -> Isi kosong dengan 0 -> Jadikan integer
             clean_p = df['Price'].astype(str).str.replace(r'[^\d.]', '', regex=True)
-            df['Price'] = pd.to_numeric(clean_p, errors='coerce').fillna(0).mul(16000).astype(int)
+            df['Price'] = pd.to_numeric(clean_p, errors='coerce').fillna(0).mul(16000).astype(float)
 
         if 'Colors' in df.columns:
             df['Colors'] = df['Colors'].astype(str).str.extract(r'(\d+)', expand=False).fillna(0).astype(int)
